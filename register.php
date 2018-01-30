@@ -64,11 +64,18 @@
 				
 				if($result)
 				{
-					echo 
+					/*echo 
 						"<h5 id='head' >Registration Successful</h5>
 						<br/>
 					
 						<h5 id='head' ><a href='login.php'>Login</a></h5>";
+						*/
+						
+						echo '<script type="text/javascript">'; 
+						echo 'alert("registration successful!");'; 
+						echo 'window.location.href = "login.php";';
+						echo '</script>';
+						
 				}
 					else
 					{

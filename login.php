@@ -39,7 +39,7 @@
 			
 			
 					if($rows==1){
-							$_SESSION['username'] = $email;
+							$_SESSION['email'] = $email;
 							// Redirect user to index.php
 							header("Location: user.php");
          
@@ -47,9 +47,15 @@
 					
 					else
 					{
-							echo "<div class='form'>
+							/*echo "<div class='form'>
 									<h3>Username/password is incorrect.</h3>
-									<br/>Click here to <a href='login.php'>Login</a></div>";
+									<br/>Click here to <a href='login.php'>Login</a></div>";*/
+									
+							echo '<script type="text/javascript">'; 
+							echo 'alert("please try again");'; 
+							echo 'window.location.href = "login.php";';
+							echo '</script>';
+									
 					}
 							}
 							else
@@ -98,14 +104,14 @@
 						<?php } ?>
 						
 						
-						<a href="#" class="forgot-password">Forgot your password?</a></div>
+						
                 </div>
             </div>
         </div>
     </div>
 	
 	
-    <footer class="site-footer">
+<!--    <footer class="site-footer">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
@@ -114,6 +120,8 @@
             </div>
         </div>
     </footer>
+-->
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
